@@ -55,7 +55,7 @@ class TestExamen2(unittest.TestCase):
         self.assertFalse(res)
 
     def test_encuentra_correcto(self):
-        res = self.analizador_musical.Encuentra(self.analizador_musical.listaBailabilidad, 0.3)
+        res = self.analizador_musical.Encuentra([7,4,6,8,5], 3)
         self.assertFalse(res)
 
     
