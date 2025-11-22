@@ -45,7 +45,10 @@ class MiClase:
     
     def Encuentra(self,lista, elemento):
         # Retorna True si el elemento se encuentra en la lista, de lo contrario False, cumple con validaciones de la lista y el elemento
-        if isinstance(elemento,int) and isinstance (lista,list):
+        if isinstance(lista,list):
+            for element in lista:
+                if not isinstance(element, int):
+                    return None
             for i in range(len(lista)):
                 if lista[i] == elemento:
                     return True
