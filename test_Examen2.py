@@ -29,7 +29,30 @@ class TestExamen2(unittest.TestCase):
         self.assertIn(2, res)
         self.assertIn(3, res)
         self.assertIn(6, res)
+    
+     # ObtieneMasBailable
+     
+     #Verifica el elemento de mayor valor en la lista
+    def test_mas_bailable_correcto(self):
+        res = self.analizador_musical.ObtieneMasBailable([0.6, 0.9, 0.2])
+        self.assertEqual(res, 0.9)
 
+    #Verifica comportamiento con lista vacia
+    def test_mas_bailable_lista_vacia(self):
+        res = self.analizador_musical.ObtieneMasBailable([])
+        self.assertIsNone(res)
+
+    # VerificaListaCanciones
+    
+    # Verifica comportamiento con lista correcta
+    def test_verifica_lista_correcta(self):
+        res = self.analizador_musical.VerificaListaCanciones(["A1", "B2", "C3"])
+        self.assertTrue(res)
+
+    #Verifica comportamiento con None en la lista
+    def test_verifica_lista_con_none(self):
+        res = self.analizador_musical.VerificaListaCanciones(["A", None])
+        self.assertFalse(res)
 
     
     
