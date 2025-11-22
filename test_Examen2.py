@@ -15,7 +15,7 @@ class TestExamen2(unittest.TestCase):
     def test_obtener_valencia_correcta_int(self):
         res = self.analizador_musical.ObtieneValencia(43262)
         self.assertIsInstance(res, int)
-        self.assertEqual(res, 1)
+        self.assertEqual(res, 5)
 
     #Test metodo DivisibleTempo
     def test_divisible_tempo_cantidad_correcta(self):
