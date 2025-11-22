@@ -42,7 +42,16 @@ class MiClase:
             if song is None:
                 return False
         return True
-
+    
+    def Encuentra(self,lista, elemento):
+        # Retorna True si el elemento se encuentra en la lista, de lo contrario False, cumple con validaciones de la lista y el elemento
+        if isinstance(elemento,int) and isinstance (lista,list):
+            for i in range(len(lista)):
+                if lista[i] == elemento:
+                    return True
+            return False
+        else:
+            return None
 
 ################################################################################################
 # Ejemplo de ejecución
@@ -52,3 +61,4 @@ print(objeto.ObtieneValencia(1234567))       # Esperado: 4
 print(objeto.DivisibleTempo(10))             # Esperado: [1, 2, 5, 10]
 print(objeto.ObtieneMasBailable([0.8, 0.9, 0.7]))  # Esperado: 0.9
 print(objeto.VerificaListaCanciones(["Canción 1", "Canción 2", "Canción 3"]))  # Esperado: True
+print(objeto.Encuentra([1, 2, 3], 2))  # Esperado: True
