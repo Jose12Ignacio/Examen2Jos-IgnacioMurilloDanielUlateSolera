@@ -54,7 +54,10 @@ class TestExamen2(unittest.TestCase):
         res = self.analizador_musical.VerificaListaCanciones(["A", None])
         self.assertFalse(res)
 
-    
+    def test_encuentra_correcto(self):
+        res = self.analizador_musical.Encuentra([7,4,6,8,5], 3)
+        self.assertFalse(res)
+
     
 
 if __name__ == "__main__":
